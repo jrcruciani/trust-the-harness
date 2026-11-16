@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Agente de operaciones · Trust the harness</title>
+<link rel="icon" href="data:," />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/static/style.css?v=mission-6" />
+</head>
+<body>
+<header class="nav">
+  <div class="brand">
+    <span class="mark" id="brand-mark">A</span>
+    <div>
+      <div class="eyebrow" id="brand-name">Agente de operaciones</div>
+      <h1>Trust the harness</h1>
+    </div>
+  </div>
+  <nav>
+    <button class="pill tab active" data-tab="live">En directo</button>
+    <button class="pill tab" data-tab="ops">Operaciones</button>
+  </nav>
+  <div class="eyebrow model" id="model">Microsoft Foundry</div>
+</header>
+
+<main id="live" class="view active">
+  <section class="scenarios">
+    <div class="row" id="scenarios">
+      <button class="pill primary" id="mission-run" disabled>Ejecutar misión</button>
+      <button class="pill fault" data-fault="pending_reservation" aria-pressed="true">Reserva pendiente</button>
+      <button class="pill fault" data-fault="lost_response" aria-pressed="true">Respuesta perdida</button>
+      <button class="pill fault" data-fault="supplier_cancel" aria-pressed="true">Cancelación del proveedor</button>
+      <button class="pill ghost" id="reset">Reiniciar</button>
+    </div>
+    <div class="row">
+      <button class="pill sm" id="fairness">Condiciones</button>
+      <button class="pill sm" id="compare-step" disabled>Mismo paso</button>
+    </div>
+  </section>
+
+  <section class="stage">
+    <article class="agentcol" id="agent">
+      <div class="panes" id="panes"></div>
+
+      <section class="nextbar hidden" id="nextbar"></section>
+
+      <section class="composer">
+        <textarea id="msg" rows="1" placeholder="Escribe un mensaje" aria-label="Mensaje al agente"></textarea>
+        <button class="pill primary" id="send">Enviar al harness vCurrent</button>
+      </section>
+    </article>
+
+    <section class="backstage">
+      <div class="agentcard">
+        <header class="agenthead">
+          <div class="agenttitle">
+            <h2>Agente de operaciones del COI</h2>
+          </div>
+          <div class="switches">
+            <div class="switch model-switch" role="radiogroup" aria-label="Modelo">
+              <button class="sw" role="radio" data-model="gpt-4.1-mini" aria-checked="true">GPT-4.1 mini</button>
+              <button class="sw" role="radio" data-model="gpt-6.1-sol" aria-checked="false">GPT-6.1 Sol</button>
+            </div>
+            <div class="switch harness-switch" role="radiogroup" aria-label="Harness del agente">
+              <button class="sw" role="radio" data-side="good" aria-checked="true">Harness vCurrent</button>
+              <button class="sw" role="radio" data-side="excellent" aria-checked="false">Harness vNext</button>
+            </div>
+          </div>
+        </header>
+
+        <div class="caps">
+          <div class="capsrow"><span class="capslbl">Capas</span><div class="chips" id="chips"></div></div>
+          <div class="capsrow"><span class="capslbl">Sistemas</span><div class="systems" id="systems"></div></div>
+          <div class="capsfoot">
+            <span id="caps-count"></span>
+            <span class="presets" id="presets">
+              <button class="pill sm" data-preset="all">Todos los controles</button>
+              <button class="pill sm" data-preset="none" title="vNext sin controles debería comportarse como vCurrent">Sin controles</button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="plant">
+        <header class="plant-hud" id="plant-hud">
+          <h3>Planta del agente</h3>
+          <span class="hud-status" data-h="status">En espera</span>
+          <span class="hud-v" data-h="time">T+ —</span>
+          <span class="hud-v" data-h="tok">P-01 · —</span>
+          <span class="hud-v" data-h="plan">Evidencia 0/16</span>
+          <button class="pill sm" data-h="replay" id="plant-replay" disabled>Repetir el turno</button>
+        </header>
+        <div class="plant-svg" id="plant-svg"></div>
+        <footer class="plant-foot">
+          <p class="plant-ticker" id="plant-ticker" aria-live="polite"></p>
+          <p class="plant-legend"><span class="lg flow"></span>propuesta <span class="lg ret"></span>evidencia <span class="lg harn"></span>control del harness <span class="lg dmg"></span>pendiente / error</p>
+        </footer>
+      </div>
+    </section>
+  </section>
+</main>
+
+<main id="ops" class="view">
+  <div class="band ops">
+    <div class="opshead">
+      <div class="opsctl">
+        <div class="eyebrow" id="ops-registry">Registro</div>
+        <div class="seg" id="ops-mode">
+          <button class="pill sm" data-mode="governed">Gobernado</button>
+          <button class="pill sm" data-mode="baseline">Baseline · sin control transversal</button>
+        </div>
+        <button class="pill sm ghost" id="ops-reset">Reiniciar laboratorio</button>
+      </div>
+    </div>
+
+    <div class="agents" id="ops-agents"></div>
+
+    <div class="opsgrid">
+      <section class="card">
+        <div class="charthead"><div class="eyebrow">Línea de tiempo · eventos en directo</div><span class="eyebrow" id="ops-live"></span></div>
+        <div class="timeline" id="ops-timeline"><p class="sub">Sin eventos todavía. Ejecuta la misión o una sonda.</p></div>
+      </section>
+      <section class="card bs-trace">
+        <div class="charthead"><div class="eyebrow">Entre bastidores · cada paso del turno</div><span class="eyebrow" id="bs-meta">Harness vCurrent</span></div>
+        <div class="bs-body" id="trace-panes"></div>
+      </section>
+    </div>
+  </div>
+</main>
+
+<div id="pop" class="popover hidden"></div>
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Detalle de la demo"><div class="modal-box"><button class="pill sm close" id="modal-close">Cerrar</button><div id="modal-body"></div></div></div>
+<script src="/static/plant.js?v=mission-6"></script>
+<script src="/static/app.js?v=mission-6"></script>
+</body>
+</html>
