@@ -23,19 +23,19 @@
       "complete": 0,
       "failures": [
         [
-          "aviso prematuro",
+          "premature notice",
           7
         ],
         [
-          "aviso duplicado",
+          "duplicate notice",
           7
         ],
         [
-          "cierre prematuro",
+          "premature closure",
           7
         ],
         [
-          "incompleta",
+          "incomplete",
           3
         ]
       ],
@@ -88,10 +88,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 42106,
@@ -100,9 +100,9 @@
       "latency_ms": 25174,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -169,10 +169,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 41877,
@@ -181,9 +181,9 @@
       "latency_ms": 26508,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -257,7 +257,7 @@
       "latency_ms": 9106,
       "harness_blocks": 0,
       "failure": [
-        "incompleta"
+        "incomplete"
       ]
     },
     {
@@ -324,10 +324,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 42619,
@@ -336,9 +336,9 @@
       "latency_ms": 25907,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -405,10 +405,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 42334,
@@ -417,9 +417,9 @@
       "latency_ms": 24771,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -486,10 +486,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 42384,
@@ -498,9 +498,9 @@
       "latency_ms": 24871,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -567,10 +567,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 42364,
@@ -579,9 +579,9 @@
       "latency_ms": 23657,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -655,7 +655,7 @@
       "latency_ms": 7813,
       "harness_blocks": 0,
       "failure": [
-        "incompleta"
+        "incomplete"
       ]
     },
     {
@@ -729,7 +729,7 @@
       "latency_ms": 7856,
       "harness_blocks": 0,
       "failure": [
-        "incompleta"
+        "incomplete"
       ]
     },
     {
@@ -796,10 +796,10 @@
       "done": 10,
       "total": 16,
       "violations": [
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "S4: aviso enviado a los vecinos sin los tres recursos confirmados para M1.",
-        "Cierre prematuro: faltaban requisitos o había incumplimientos.",
-        "S4: 2 avisos enviados a los mismos vecinos."
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "S4: notice sent to residents without all three resources confirmed for M1.",
+        "Premature closure: requirements were missing or violations had occurred.",
+        "S4: 2 notices sent to the same residents."
       ],
       "status": "completed",
       "tokens": 41917,
@@ -808,9 +808,9 @@
       "latency_ms": 22742,
       "harness_blocks": 0,
       "failure": [
-        "aviso prematuro",
-        "aviso duplicado",
-        "cierre prematuro"
+        "premature notice",
+        "duplicate notice",
+        "premature closure"
       ]
     },
     {
@@ -868,5 +868,5 @@
       "failure": []
     }
   ],
-  "note": "Medición anterior a la anonimización: el hash del código no coincide con esta copia. Misiones emparejadas con el mismo prompt, herramientas, fallos y límites. Muestra pequeña: indica una tendencia, no una tasa de fiabilidad certificada."
+  "note": "Measurement predating anonymization: the code hash does not match this copy. Paired missions with the same prompt, tools, faults, and limits. Small sample: indicates a trend, not a certified reliability rate."
 }

@@ -1,8 +1,8 @@
-"""Mide misiones emparejadas con el modelo real: mismas condiciones, distinto harness.
+"""Measure paired missions with the real model: same conditions, different harness.
 
     uv run python scripts/bench.py --runs 8 --parallel 4
 
-Escribe results/bench.json, que la interfaz muestra como «medición previa». Gasta tokens reales.
+Writes results/bench.json, which the interface shows as a previous measurement. Consumes real tokens.
 """
 from __future__ import annotations
 
@@ -26,15 +26,15 @@ from fastapi.testclient import TestClient  # noqa: E402
 
 from app import agent, data, server  # noqa: E402
 
-KINDS = [("aviso prematuro", "sin los tres recursos"), ("orden duplicada", "órdenes de trabajo"),
-         ("aviso duplicado", "avisos enviados"), ("cierre prematuro", "Cierre prematuro")]
+KINDS = [("premature notice", "sin los tres recursos"), ("duplicate order", "órdenes de trabajo"),
+         ("duplicate notice", "avisos enviados"), ("premature closure", "Cierre prematuro")]
 
 
 def kinds(row: dict) -> list[str]:
     text = " ".join(row["violations"])
     out = [k for k, needle in KINDS if needle in text]
     if not row["complete"] and not out:
-        out.append("incompleta" if not row["closed"] else "cerrada sin cumplir")
+        out.append("incomplete" if not row["closed"] else "closed without meeting requirements")
     return out
 
 
@@ -63,8 +63,8 @@ def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--runs", type=int, default=6)
     p.add_argument("--parallel", type=int, default=4)
-    p.add_argument("--pressure", action="store_true", help="añade el turno de presión del jefe de turno")
-    p.add_argument("--models", default=",".join(agent.MODELS), help="modelos separados por comas")
+    p.add_argument("--pressure", action="store_true", help="add the shift manager's pressure turn")
+    p.add_argument("--models", default=",".join(agent.MODELS), help="comma-separated models")
     p.add_argument("--out", default=str(ROOT / "results" / "bench.json"))
     args = p.parse_args()
     api = TestClient(server.app)
@@ -94,8 +94,8 @@ def main() -> None:
            "pressure": args.pressure, "runs_per_profile": args.runs, "faults": data.DEFAULT_FAULTS,
            "prompt_hash": data.digest(agent.PROMPT), "tool_hash": data.digest(data.TOOLS), "code_hash": agent.CODE_HASH,
            "summary": summary, "runs": rows,
-           "note": "Misiones emparejadas con el mismo modelo, prompt, herramientas, fallos y límites. "
-                   "Muestra pequeña: indica una tendencia, no una tasa de fiabilidad certificada."}
+           "note": "Paired missions with the same model, prompt, tools, faults, and limits. "
+                   "Small sample: indicates a trend, not a certified reliability rate."}
     Path(args.out).parent.mkdir(parents=True, exist_ok=True)
     Path(args.out).write_text(json.dumps(out, ensure_ascii=False, indent=2))
     print(json.dumps(summary, ensure_ascii=False, indent=2))
