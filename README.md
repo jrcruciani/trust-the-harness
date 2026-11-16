@@ -75,9 +75,15 @@ Las decisiones que causarían daño (según el juez, ejecutándolas sobre una co
 ## Pantallas y guion
 
 Se mantiene la interfaz clara: chat y matriz de hechos (sector × requisito) a la izquierda; selectores de modelo y de harness,
-controles y la planta P&ID a la derecha. En la planta, RP-01 es el registro, GA-01 la guarda de escrituras, CV-01 el cierre
-verificado y RI-01 el reintento seguro. Cada combinación harness × modelo es un carril con su propia copia de la misión.
+controles y la **Cocina del agente** a la derecha. El cocinero representa al modelo; la despensa, la información que consulta;
+los fogones, el pase y el libro, las mismas herramientas para ambos harnesses. Las órdenes ponen platos al fuego y los avisos
+los sirven en las mesas del hospital, la residencia y el colegio. El riel de comandas recuerda lo pendiente, los arcos retienen
+acciones prematuras, la puerta comprueba el cierre y el pincho de tickets evita repetir operaciones. Estos controles se muestran
+en violeta cuando están activos y en gris cuando están apagados. La cocina representa eventos reales de la ejecución, no un guion.
+Cada combinación harness × modelo es un carril con su propia copia de la misión.
 **Repetir el turno** reproduce los eventos sin volver a ejecutar el agente. Cada misión tarda unos 20–50 s.
+Arrastra la cocina para girarla y haz doble clic para abrirla a pantalla completa. Respeta la preferencia de movimiento reducido
+y reduce el pintado en reposo. `static/plant.js` y sus estilos se conservan como referencia, pero no se cargan.
 
 1. **Condiciones:** mismo prompt, herramientas, fallos y presupuesto; enseña la medición 2×2.
 2. **Ejecutar misión** con GPT-4.1 mini y vCurrent: avisa a vecinos con la cisterna sin confirmar, repite avisos o cierra
@@ -124,6 +130,7 @@ necesitas despliegues con los nombres indicados en el selector. La inferencia co
 ```bash
 PORT=8799 ./run.sh                 # http://127.0.0.1:8799
 uv run python -m unittest discover -s tests -v
+node --test tests/kitchen.test.js  # Componente visual; requiere Node.js 18 o posterior
 ```
 
 Las pruebas son deterministas: cliente del modelo falso y SQLite temporal, sin Azure.

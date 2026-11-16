@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="/static/style.css?v=mission-6" />
+<link rel="stylesheet" href="/static/style.css?v=kitchen-1" />
 </head>
 <body>
 <header class="nav">
@@ -83,19 +83,19 @@
           </div>
         </div>
       </div>
-      <div class="plant">
+      <div class="plant kitchen">
         <header class="plant-hud" id="plant-hud">
-          <h3>Planta del agente</h3>
+          <h3>Cocina del agente</h3>
           <span class="hud-status" data-h="status">En espera</span>
           <span class="hud-v" data-h="time">T+ —</span>
-          <span class="hud-v" data-h="tok">P-01 · —</span>
+          <span class="hud-v" data-h="tok">Cocinero · —</span>
           <span class="hud-v" data-h="plan">Evidencia 0/16</span>
           <button class="pill sm" data-h="replay" id="plant-replay" disabled>Repetir el turno</button>
         </header>
         <div class="plant-svg" id="plant-svg"></div>
         <footer class="plant-foot">
           <p class="plant-ticker" id="plant-ticker" aria-live="polite"></p>
-          <p class="plant-legend"><span class="lg flow"></span>propuesta <span class="lg ret"></span>evidencia <span class="lg harn"></span>control del harness <span class="lg dmg"></span>pendiente / error</p>
+          <p class="plant-legend"><span class="lg flow"></span>cocinero = modelo <span class="lg harn"></span>cocina organizada = harness <span class="lg dmg"></span>pedido sin confirmar</p>
         </footer>
       </div>
     </section>
@@ -132,7 +132,7 @@
 
 <div id="pop" class="popover hidden"></div>
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-label="Detalle de la demo"><div class="modal-box"><button class="pill sm close" id="modal-close">Cerrar</button><div id="modal-body"></div></div></div>
-<script src="/static/plant.js?v=mission-6"></script>
-<script src="/static/app.js?v=mission-6"></script>
+<script src="/static/kitchen.js?v=kitchen-1"></script>
+<script src="/static/app.js?v=kitchen-1"></script>
 </body>
 </html>

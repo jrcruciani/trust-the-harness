@@ -351,6 +351,13 @@ details.raw pre { margin: 4px 0 0; max-height: 170px; overflow: auto; font: 400 
 .lg.dmg { border-color: var(--sunset); }
 .lg.blind { width: 2px; height: 10px; border: 0; background: var(--ink); margin-bottom: -1px; }
 
+.kitchen .plant-svg { background: #f7f5f0; }
+.kitchen .plant-svg:fullscreen { width: 100%; height: 100%; }
+.kitchen .lg { width: 7px; height: 7px; border: 0; border-radius: 50%; margin-bottom: 1px; }
+.kitchen .lg.flow { background: var(--breeze-ink); }
+.kitchen .lg.harn { background: var(--dusk); }
+.kitchen .lg.dmg { background: var(--sunset); }
+
 /* ---------------------------------------------------------------- planta P&ID (HMI de alto rendimiento: gris, y color solo cuando algo pasa) */
 .plant svg { font-family: var(--mono); }
 .plant .grid { fill: #e3e4e0; }
